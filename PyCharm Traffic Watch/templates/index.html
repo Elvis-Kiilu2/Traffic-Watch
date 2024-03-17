@@ -52,9 +52,35 @@ button[type="submit"]:hover {
 </head>
 <body>
     <h1>Traffic Video Analyzer</h1>
-    <form action="/upload" method="post" enctype="multipart/form-data">
-        <input type="file" name="file" accept="video/*">
-        <button type="submit">Upload Video</button>
+    <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+        <input id="fileInput" type="file" name="file" accept="video/*">
+        <button id="uploadButton" type="submit">Upload Video</button>
     </form>
+    <br>
+    <video id="annotatedVideo" width="640" height="480" controls></video>
+
+    <script>
+       document.getElementById('uploadForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+    var file = document.getElementById('fileInput').files[0];
+    var formData = new FormData();
+    formData.append('file', file);
+
+    fetch('/upload', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        var video = document.getElementById('annotatedVideo');
+        var blobUrl = URL.createObjectURL(new Blob([data], { type: 'video/mp4' }));
+        video.src = blobUrl;
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+    </script>
 </body>
+
 </html>
