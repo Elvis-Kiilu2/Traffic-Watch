@@ -1,11 +1,11 @@
-# Traffic-Watch
+# FlawSense
 # YOLOv8 Implementation with Roboflow Dataset
 
-This project implements YOLOv8 for object detection and segmentation using a custom dataset from Roboflow.
+This project implements YOLOv8 for object detection and segmentation and bytetrack ufor object tracking on a custom dataset prepared from Roboflow.
 
 ## Overview
 
-This repository contains the code to train, validate, and run inference on YOLOv8 models using a custom dataset obtained from Roboflow. The project aims to demonstrate the end-to-end process of training YOLOv8 for object detection and segmentation tasks.
+This repository contains the code to train, validate, and run inference on YOLOv8 models using a custom dataset obtained from Roboflow. The project aims to demonstrate the end-to-end process of training YOLOv8 for object detection and segmentation and tasks.
 
 ## Features
 
@@ -46,7 +46,7 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 
 ## License
 
-[Specify the license under which your project is distributed]
+
 
 ## Acknowledgements
 
