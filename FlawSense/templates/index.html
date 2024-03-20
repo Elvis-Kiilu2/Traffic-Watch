@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowSense - Home</title>
+    <link rel="stylesheet" type="text/css" href="Index_style.css">
+    <style>/* Header Styles */
+        header {
+            background-color: #2c3e50; /* Dark blue */
+            color: #ffffff; /* White text color */
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        
+        /* Hero Section Styles */
+        #hero {
+            background-color: #ecf0f1; /* Light grey */
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        #hero h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        
+        #hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        
+        /* Main Content Styles */
+        #main-content {
+            padding: 50px 0;
+        }
+        
+        #main-content .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        #main-content .content-left {
+            flex: 0 0 calc(50% - 10px);
+        }
+        
+        #main-content .content-right {
+            flex: 0 0 calc(50% - 10px);
+        }
+        
+        .feature {
+            margin-bottom: 30px;
+        }
+        
+        .feature h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        
+        .feature p {
+            font-size: 1.1em;
+        }
+        
+        /* Feedback Section Styles */
+        #feedback {
+            background-color: #2c3e50; /* Dark blue */
+            color: #ffffff; /* White text color */
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        #feedback h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        
+        #feedback p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: #2c3e50; /* Dark blue */
+            color: #ffffff; /* White text color */
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        footer p {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        
+        /* Button Styles */
+        .button {
+            display: inline-block;
+            background-color: #3498db; /* Blue */
+            color: #ffffff; /* White text color */
+            padding: 10px 20px;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .button:hover {
+            background-color: #2980b9; /* Darker blue on hover */
+        }
+        
+        
+        /* Updated styling for the main content container */
+        #main-content .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* Distribute items along the main axis with space in between */
+            margin: 0 auto; /* Center the container horizontally */
+            max-width: 1200px; /* Set maximum width for the container */
+            padding: 0 20px; /* Add some padding to the sides */
+        }
+        
+        #main-content .content-left {
+            flex: 0 0 calc(50% - 20px); /* Take up half of the container width minus padding */
+            margin-bottom: 20px; /* Add some bottom margin for separation */
+        }
+        
+        #main-content .content-right {
+            flex: 0 0 calc(50% - 20px); /* Take up half of the container width minus padding */
+            margin-bottom: 20px; /* Add some bottom margin for separation */
+        }
+        
+        @media (max-width: 768px) {
+            /* Adjust layout for smaller screens */
+            #main-content .container {
+                flex-direction: column;
+            }
+            #main-content .content-left, #main-content .content-right {
+                flex: 1 1 auto;
+                margin-bottom: 0; /* Remove bottom margin for single column layout */
+                width: 100%; /* Set width to 100% for full width */
+            }
+        }
+        
+        
+        .button {
+            display: inline-block;
+            background-color: #007bff; /* Blue color */
+            color: #fff; /* White text color */
+            padding: 10px 20px;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .button:hover {
+            background-color: #0056b3; /* Darker blue color on hover */
+        }
+        body {
+            background-color: #f4f4f4; /* Light grey */
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Flow_Sense</h1>
+            <p>Your Traffic Monitoring Solution</p>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Understand Traffic Like Never Before</h2>
+            <p>With FlowSense, you can detect objects, segment anything, and estimate object speeds.</p>
+            <a href="{{ url_for('upload_file') }}" class="button">Get Started</a>
+        </div>
+    </section>
+
+    <section id="main-content">
+        <div class="container">
+            <div class="content-left">
+                <h2>See FlowSense in Action</h2>
+                <div class="video-container">
+                    <!-- Embed a sample video here -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/aXwXELFqp5Q" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="content-right">
+                <h2>Key Features</h2>
+                <div class="feature">
+                    <h3>Detect Objects</h3>
+                    <p>Identify vehicles, pedestrians, and other objects on the road with precision.</p>
+                </div>
+                <div class="feature">
+                    <h3>Segmentation</h3>
+                    <p>Segment objects on the road accurately.</p>
+                </div>
+                <div class="feature">
+                    <h3>Speed Estimation</h3>
+                    <p>Estimate the speed of vehicles to monitor traffic flow and ensure safety.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="feedback">
+        <div class="container">
+            <h2>Feedback</h2>
+            <p>We'd love to hear from you! Share your thoughts or report any issues.</p>
+            <a href="feedback.html" class="button">Provide Feedback</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 FlowSense. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
