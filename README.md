@@ -32,7 +32,7 @@ To use the project, follow these instructions:
 
 ## Examples
 
-[Include examples or screenshots demonstrating the project in action]
+
 
 ## Contributing
 
@@ -43,9 +43,6 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 3. Commit your changes (`git commit -am 'Add some feature'`).
 4. Push to the branch (`git push origin feature/YourFeature`).
 5. Open a pull request.
-
-## License
-
 
 
 ## Acknowledgements
