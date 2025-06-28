@@ -17,7 +17,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.secret_key = 'super_secret_key'
 
 # Load the YOLOv8 model
-best_weights = r"C:\Users\KIILU\Desktop\CS\year 3\Y3Sem2\Project\PyCharm Traffic Watch\content\runs\segment\train\weights\best.pt"
+#best_weights = r"/Traffic-Watch/FlawSense/seg_weights.zip"
 model = YOLO(best_weights)
 
 def allowed_file(filename):
